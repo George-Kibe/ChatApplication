@@ -12,6 +12,8 @@ import React from 'react';
 import Router from './src/navigation';
 import {StatusBar, useColorScheme} from 'react-native';
 
+import 'react-native-gesture-handler';
+
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const App = () => {
