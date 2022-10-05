@@ -19,7 +19,6 @@ const Router = () => {
                 backgroundColor:"#34B7F1"
             },
             headerTintColor:"white"
-
         }}>
             <Stack.Screen name="Home Navigation" 
                 options={{
@@ -31,7 +30,8 @@ const Router = () => {
                         </View>
                     )
                 }} 
-                component={BottomNavigator} />
+                component={TopNavigator}
+            />
             <Stack.Screen name="Settings" component={SettingsScreen} />
         </Stack.Navigator>
     </NavigationContainer>    
