@@ -16,7 +16,9 @@ const Router = () => {
     <NavigationContainer>
         <Stack.Navigator screenOptions={{
             headerStyle:{
-                backgroundColor:"#34B7F1"
+                backgroundColor:"#34B7F1",
+                shadowOpacity:0,
+                elevation:0
             },
             headerTintColor:"white"
         }}>
