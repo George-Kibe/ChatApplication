@@ -3,10 +3,11 @@ import {NavigationContainer} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import FontAwesome from "react-native-vector-icons/FontAwesome"
 import Entypo from "react-native-vector-icons/Entypo"
-
+import Ionicons from "react-native-vector-icons/Ionicons"
 const Stack = createStackNavigator();
 
 import SettingsScreen from '../screens/SettingsScreen';
+import ChatRoomScreen from '../screens/ChatRoomScreen';
 import BottomNavigator from './BottomNavigator';
 import TopNavigator from './TopNavigator';
 import { View, StyleSheet } from 'react-native';
@@ -35,6 +36,18 @@ const Router = () => {
                 component={TopNavigator}
             />
             <Stack.Screen name="Settings" component={SettingsScreen} />
+            <Stack.Screen name="ChatRoom" component={ChatRoomScreen} 
+                options={({route}) => ({
+                    title:route.params.username,
+                    headerRight: () =>(
+                        <View style={[styles.iconsView, {width:100}]}>
+                            <Ionicons name="call" size={22} color="white" />
+                            <FontAwesome name="video-camera" size={22} color="white" />
+                            <Entypo name="dots-three-vertical" size={22} color="white" />
+                        </View>
+                    )
+                })}
+            />
         </Stack.Navigator>
     </NavigationContainer>    
   )
