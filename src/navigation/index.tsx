@@ -8,6 +8,7 @@ const Stack = createStackNavigator();
 
 import SettingsScreen from '../screens/SettingsScreen';
 import ChatRoomScreen from '../screens/ChatRoomScreen';
+import ContactsScreen from '../screens/ContactsScreen';
 import BottomNavigator from './BottomNavigator';
 import TopNavigator from './TopNavigator';
 import { View, StyleSheet } from 'react-native';
@@ -36,6 +37,7 @@ const Router = () => {
                 component={TopNavigator}
             />
             <Stack.Screen name="Settings" component={SettingsScreen} />
+            <Stack.Screen name="Contacts" component={ContactsScreen} />
             <Stack.Screen name="ChatRoom" component={ChatRoomScreen} 
                 options={({route}) => ({
                     title:route.params.username,
